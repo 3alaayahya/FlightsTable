@@ -1,0 +1,142 @@
+﻿body {
+    background-image: url('360_F_211607578_WirpVpno9vb4IzCnw20fsZEFe5LDeW10.jpg');
+    background-repeat: no-repeat;
+}
+.container {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a{
+    color:black;
+}
+
+a:hover{
+    color:blue;
+}
+
+.search-bar input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.search-bar {
+    text-align: right;
+    margin-right: 35px;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+}
+td{
+    width:100px;
+}
+h1{
+    text-align:center;
+}
+
+#tableBody{
+    font-size:16px;
+}
+.firstRow{
+    font-size:17px;
+}
+
+/* Styling for the first row */
+.firstRow {
+    background-color: lightblue; /* Light purple */
+}
+
+#sort-button,#toggleFuncBtn {
+    display:inline-block;
+}
+
+.func-buttons {
+    display: none;
+}
+
+/* Styling for rows with status "LANDED" */
+#FlightTable tbody tr[data-type="A"] {
+    background-color: #cce6ff; /* Light blue */
+    background-image: url('410143-200.png');
+    background-size: 35px;
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: right center; /* Position image to the right of the cell */
+    padding-right: 20px; /* Adjust cell padding to accommodate the image */
+}
+
+/* Styling for rows with status "Departed" */
+#FlightTable tbody tr[data-type="D"] {
+    background-color: lightpink; /* Light green */
+    background-image: url('723963.png');
+    background-size: 27px;
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: right center; /* Position image to the right of the cell */
+    padding-right: 20px; /* Adjust cell padding to accommodate the image */
+}
+
+.sort-buttons{
+    display:none;
+}
+
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button,.pagination select {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+button:hover,.pagination select:hover {
+    background-color: #ddd;
+}
+
+.pagination select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.pagination select::-ms-expand {
+    display: none;
+}
+
+.pagination select option {
+    padding: 8px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

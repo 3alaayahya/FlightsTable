@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>לוח טיסות</title>
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/7893/7893979.png" type="image/x-icon" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div dir="rtl" class="container">
+
+        <h1>לוח טיסות</h1>
+
+        <button id="sort-button" onclick="toggleSortButtons()">מיין</button>
+        <div class="sort-buttons">
+            <button onclick="sortTable('number')">מיין לפי מספר טיסה</button>
+            <button onclick="sortTable('schedueTime')">מיין לפי זמן</button>
+            <button onclick="sortTable('country')">מיין לפה מדינה</button>
+            <button onclick="sortTable('city')">מיין לפי עיר</button>
+            <button onclick="sortTable('status')">מיין לפי סטטוס</button>
+            <button onclick="sortTable('operatorShort')">מיין לפי חברת התעופה</button>
+        </div>
+
+        <button id="toggleFuncBtn" onclick="toggleFunctionality()">סינון</button>
+
+        <div class="func-buttons">
+            <button onclick="TimeDifferent()">הצג רק טיסות עם זמן בפועל שונה מזמן מתוכנן</button>
+            <button onclick="TimeNotDifferent()">הצג רק טיסות עם זמן בפועל זהה לזמן מתוכנן</button>
+            <button onclick="showFlightDistribution()">הצג תפלגות שעות לפי מספר טיסות</button>
+            <button onclick="showPrimeFlights()">הצג רק טיסות עם מספר ראשוני</button>
+        </div>
+
+        <button onclick="resetTable()">איפוס</button>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="חיפוש...">
+        </div>
+
+        <table id="FlightTable">
+            <tr class="firstRow">
+                <td><h3>חברת התעופה</h3></td>
+                <td><h3>מספר הטיסה</h3></td>
+                <td><h3>זמן מתוכנן</h3></td>
+                <td><h3>זמן בפועל</h3></td>
+                <td><h3>מדינה</h3></td>
+                <td><h3>עיר</h3></td>
+                <td><h3>סטטוס</h3></td>
+            </tr>
+            <tbody id="tableBody"></tbody>
+        </table>
+        
+        <div class="pagination">
+            <button id="prevPage">דף קודם</button>
+            <select id="pageSelect"></select>
+            <button id="nextPage">דף הבא</button>
+        </div>
+
+        <div id="flightDetails" class="flightDetails"></div>
+
+    </div>
+
+    <div id="flightDistributionGraph"></div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="flights.js"></script>
+    <script src="JavaScript.js"></script>
+
+</body>
+</html>
